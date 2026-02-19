@@ -1,17 +1,19 @@
 import java.time.LocalDate;
 
-
-public class email{
+/**
+ * Email class for managing email-related information.
+ */
+public class Email {
     public String name;
     public Integer document_id;
     public Integer business_id;
-    
+
     public LocalDate expiration_date;
     public Boolean is_visible;
     public Integer id;
 
 
-    email(){
+    Email(){
         this.name = "";
         this.document_id = null;
         this.business_id = null;
@@ -20,12 +22,13 @@ public class email{
         this.id = null;
     }
 
-    email(String name, Integer document_id, Integer business_id, LocalDate expiration_date, Boolean is_visible, Integer id){
+      Email(String name, Integer documentId, Integer businessId,
+          LocalDate expirationDate, Boolean isVisible, Integer id) {
         this.name = name;
-        this.document_id = document_id;
-        this.business_id = business_id;
-        this.expiration_date = expiration_date;
-        this.is_visible = is_visible;
+        this.document_id = documentId;
+        this.business_id = businessId;
+        this.expiration_date = expirationDate;
+        this.is_visible = isVisible;
         this.id = id;
-    }
+      }
 }
