@@ -3,7 +3,7 @@ import java.time.LocalDate;
 /**
  * Email class for managing email-related information.
  */
-public class Email {
+public class email {
   public String name;
   public Integer documentId;
   public Integer businessId;
@@ -12,7 +12,7 @@ public class Email {
   public Boolean isVisible;
   public Integer id;
 
-  Email() {
+  email() {
     this.name = "";
     this.documentId = null;
     this.businessId = null;
@@ -21,7 +21,7 @@ public class Email {
     this.id = null;
   }
 
-  Email(String name, Integer documentId, Integer businessId,
+  email(String name, Integer documentId, Integer businessId,
       LocalDate expirationDate, Boolean isVisible, Integer id) {
     this.name = name;
     this.documentId = documentId;
