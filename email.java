@@ -5,6 +5,7 @@ public class email{
     public String name;
     public Integer document_id;
     public Integer business_id;
+    
     public LocalDate expiration_date;
     public Boolean is_visible;
     public Integer id;
