@@ -1,31 +1,33 @@
 import java.time.LocalDate;
 
+/**
+ * Email class for managing email-related information.
+ */
+public class email {
+  public String name;
+  public Integer documentId;
+  public Integer businessId;
 
-public class email{
-    public String name;
-    public Integer document_id;
-    public Integer business_id;
-    
-    public LocalDate expiration_date;
-    public Boolean is_visible;
-    public Integer id;
+  public LocalDate expirationDate;
+  public Boolean isVisible;
+  public Integer id;
 
+  email() {
+    this.name = "";
+    this.documentId = null;
+    this.businessId = null;
+    this.expirationDate = null;
+    this.isVisible = false;
+    this.id = null;
+  }
 
-    email(){
-        this.name = "";
-        this.document_id = null;
-        this.business_id = null;
-        this.expiration_date = null;
-        this.is_visible = false;
-        this.id = null;
-    }
-
-    email(String name, Integer document_id, Integer business_id, LocalDate expiration_date, Boolean is_visible, Integer id){
-        this.name = name;
-        this.document_id = document_id;
-        this.business_id = business_id;
-        this.expiration_date = expiration_date;
-        this.is_visible = is_visible;
-        this.id = id;
-    }
+  email(String name, Integer documentId, Integer businessId,
+      LocalDate expirationDate, Boolean isVisible, Integer id) {
+    this.name = name;
+    this.documentId = documentId;
+    this.businessId = businessId;
+    this.expirationDate = expirationDate;
+    this.isVisible = isVisible;
+    this.id = id;
+  }
 }
