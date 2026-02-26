@@ -29,4 +29,4 @@ jobs:
       # Run Checkstyle on your Java source code
       - name: Run Checkstyle
         run: |
-           java -jar checkstyle.jar -c google_checks.xml src/
+           java -jar checkstyle.jar -c google_checks.xml *.java
