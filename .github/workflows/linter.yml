@@ -1,0 +1,32 @@
+name: Java Lint (Standalone Checkstyle)
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Set up Java
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      # Download Checkstyle JAR
+      - name: Download Checkstyle
+        run: |
+          wget https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.12.4/checkstyle-10.12.4-all.jar -O checkstyle.jar
+
+      # Run Checkstyle on your Java source code
+      - name: Run Checkstyle
+        run: |
+           java -jar checkstyle.jar -c /google_checks.xml *.java
